@@ -17,9 +17,9 @@ using Microsoft.Practices.Unity;
 
 namespace ISuitePro.ERP.Digital.CxUI.UWP
 {
-    public sealed partial class MainPage
+    public sealed partial class LoginPage
     {
-        public MainPage()
+        public LoginPage()
         {
             this.InitializeComponent();
 

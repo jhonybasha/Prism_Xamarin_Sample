@@ -4,10 +4,11 @@ using Prism.Navigation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Xamarin.Forms;
 
 namespace ISuitePro.ERP.Digital.CxUI.ViewModels
 {
-    public class MainPageViewModel : BindableBase, INavigationAware
+    public class LoginPageViewModel : BindableBase, INavigationAware
     {
         private string _title;
         public string Title
@@ -16,7 +17,7 @@ namespace ISuitePro.ERP.Digital.CxUI.ViewModels
             set { SetProperty(ref _title, value); }
         }
 
-        public MainPageViewModel()
+        public LoginPageViewModel()
         {
 
         }
@@ -41,7 +42,7 @@ namespace ISuitePro.ERP.Digital.CxUI.ViewModels
 
         public DelegateCommand NavigateToSpeakPageCommand { get; private set; }
 
-        public MainPageViewModel(INavigationService navigationService)
+        public LoginPageViewModel(INavigationService navigationService)
         {
             _navigationService = navigationService;
             NavigateToSpeakPageCommand = new DelegateCommand(NavigateToSpeakPage);
