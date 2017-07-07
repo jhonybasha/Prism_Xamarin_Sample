@@ -19,6 +19,7 @@ namespace ISuitePro.ERP.Digital.CxUI
         {
             Container.RegisterTypeForNavigation<NavigationPage>();
             Container.RegisterTypeForNavigation<MainPage>();
+            Container.RegisterTypeForNavigation<SpeakPage>();
         }
     }
 }

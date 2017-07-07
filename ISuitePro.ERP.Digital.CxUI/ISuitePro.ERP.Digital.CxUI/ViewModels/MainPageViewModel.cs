@@ -36,5 +36,20 @@ namespace ISuitePro.ERP.Digital.CxUI.ViewModels
             if (parameters.ContainsKey("title"))
                 Title = (string)parameters["title"] + " and Prism";
         }
+
+        private INavigationService _navigationService;
+
+        public DelegateCommand NavigateToSpeakPageCommand { get; private set; }
+
+        public MainPageViewModel(INavigationService navigationService)
+        {
+            _navigationService = navigationService;
+            NavigateToSpeakPageCommand = new DelegateCommand(NavigateToSpeakPage);
+        }
+
+        private void NavigateToSpeakPage()
+        {
+            _navigationService.NavigateAsync("SpeakPage");
+        }
     }
 }

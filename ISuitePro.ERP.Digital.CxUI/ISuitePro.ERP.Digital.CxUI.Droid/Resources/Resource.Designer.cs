@@ -26,7 +26,6 @@ namespace ISuitePro.ERP.Digital.CxUI.Droid
 		
 		public static void UpdateIdValues()
 		{
-			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::ISuitePro.ERP.Digital.CxUI.Droid.Resource.Attribute.actionBarSize;
 		}
 		
 		public partial class Animation
