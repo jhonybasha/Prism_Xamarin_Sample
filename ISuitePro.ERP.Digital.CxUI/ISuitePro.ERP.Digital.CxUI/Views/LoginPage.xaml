@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms" 
              prism:ViewModelLocator.AutowireViewModel="True"   
-             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
              x:Class="ISuitePro.ERP.Digital.CxUI.Views.LoginPage"
              Title="Login Page">
     <Grid>
@@ -11,7 +10,6 @@
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
         <StackLayout HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="500" Margin="50">
-            <!--<Image HeightRequest="200" WidthRequest="200" Source="logo.png" VerticalOptions="Center" Margin="5" />-->
             <Image xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
             <Image.Source>
@@ -31,7 +29,7 @@
             <Label Text="Sign in to your account" />
             <Entry Placeholder="User name" />
             <Entry Placeholder="Password" IsPassword="True" />
-            <Button Text="Login" HorizontalOptions="End" WidthRequest="200" BorderWidth="1" BorderRadius="2" Command="{Binding NavigateToSpeakPageCommand}" />
+            <Button Text="Login" HorizontalOptions="End" WidthRequest="200" BorderWidth="1" BorderRadius="2" Command="{Binding NavigateToHomePageCommand}" />
         </StackLayout>
     </Grid>
 

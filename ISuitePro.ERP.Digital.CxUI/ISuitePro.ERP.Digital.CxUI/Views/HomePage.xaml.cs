@@ -2,9 +2,9 @@
 
 namespace ISuitePro.ERP.Digital.CxUI.Views
 {
-    public partial class SpeakPage : ContentPage
+    public partial class HomePage : NavigationPage
     {
-        public SpeakPage()
+        public HomePage()
         {
             InitializeComponent();
         }

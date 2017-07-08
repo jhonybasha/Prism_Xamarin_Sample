@@ -40,17 +40,17 @@ namespace ISuitePro.ERP.Digital.CxUI.ViewModels
 
         private INavigationService _navigationService;
 
-        public DelegateCommand NavigateToSpeakPageCommand { get; private set; }
+        public DelegateCommand NavigateToHomePageCommand { get; private set; }
 
         public LoginPageViewModel(INavigationService navigationService)
         {
             _navigationService = navigationService;
-            NavigateToSpeakPageCommand = new DelegateCommand(NavigateToSpeakPage);
+            NavigateToHomePageCommand = new DelegateCommand(NavigateToHomePage);
         }
 
-        private void NavigateToSpeakPage()
+        private void NavigateToHomePage()
         {
-            _navigationService.NavigateAsync("SpeakPage");
+            _navigationService.NavigateAsync("HomePage");
         }
     }
 }
