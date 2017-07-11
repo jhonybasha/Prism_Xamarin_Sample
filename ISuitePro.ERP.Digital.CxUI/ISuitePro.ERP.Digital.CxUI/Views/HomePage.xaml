@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                 xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+                xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
                 xmlns:behaviors="clr-namespace:Corcav.Behaviors;assembly=Corcav.Behaviors"
                 prism:ViewModelLocator.AutowireViewModel="True"
                 x:Class="ISuitePro.ERP.Digital.CxUI.Views.HomePage" Title="HomePage">
@@ -29,13 +30,26 @@
         </ResourceDictionary>
 
     </ContentPage.Resources>
-
-    <ListView ItemTemplate="{StaticResource TopSeriesTemplate}"
+    <Label Text="Here" />
+    <telerikPrimitives:RadSideDrawer x:Name="drawer" DrawerLength="200">
+        <telerikPrimitives:RadSideDrawer.MainContent>
+            <Label Text="Main content" />
+        </telerikPrimitives:RadSideDrawer.MainContent>
+        <telerikPrimitives:RadSideDrawer.DrawerContent>
+            <StackLayout>
+                <Button Text="Mail" />
+                <Button Text="Calendar" />
+                <Button Text="People" />
+                <Button Text="Tasks" />
+            </StackLayout>
+        </telerikPrimitives:RadSideDrawer.DrawerContent>
+    </telerikPrimitives:RadSideDrawer>
+    <!--<ListView ItemTemplate="{StaticResource TopSeriesTemplate}"
             ItemsSource="{Binding Path=MenuItems}" RowHeight="30">
         <behaviors:Interaction.Behaviors>
             <behaviors:BehaviorCollection>
                 <behaviors:EventToCommand EventName="ItemTapped" Command="{Binding GoToDetailPage}" PassEventArgument="True" />
             </behaviors:BehaviorCollection>
         </behaviors:Interaction.Behaviors>
-    </ListView>
+    </ListView>-->
 </ContentPage>

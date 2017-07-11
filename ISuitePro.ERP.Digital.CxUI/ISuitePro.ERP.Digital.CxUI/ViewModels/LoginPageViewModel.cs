@@ -50,7 +50,7 @@ namespace ISuitePro.ERP.Digital.CxUI.ViewModels
 
         private void NavigateToHomePage()
         {
-            _navigationService.NavigateAsync("HomePage");
+            _navigationService.NavigateAsync("MainPage");
         }
     }
 }
