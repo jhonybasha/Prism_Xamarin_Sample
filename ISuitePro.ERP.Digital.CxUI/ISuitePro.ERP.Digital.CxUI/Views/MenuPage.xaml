@@ -4,6 +4,48 @@
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="ISuitePro.ERP.Digital.CxUI.Views.MenuPage"
+             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:telerikListView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls"
              Title="Payroll">
-  
+    <!--<StackLayout>
+        <Button Text="Detail1" Clicked="Button1_OnClicked" />
+        <Button Text="Detail2" Clicked="Button2_OnClicked" />
+        <Button Text="Detail3" Clicked="Button3_OnClicked" />
+    </StackLayout>-->
+
+    <telerikDataControls:RadListView x:Name="listView" BackgroundColor="White">
+        <telerikDataControls:RadListView.ItemTemplate>
+            <DataTemplate>
+                <telerikListView:ListViewTemplateCell>
+                    <telerikListView:ListViewTemplateCell.View>
+                        <Grid BackgroundColor="{Binding Color}" />
+                    </telerikListView:ListViewTemplateCell.View>
+                </telerikListView:ListViewTemplateCell>
+            </DataTemplate>
+        </telerikDataControls:RadListView.ItemTemplate>
+        <telerikDataControls:RadListView.LayoutDefinition>
+            <telerikListView:ListViewLinearLayout ItemLength="40" VerticalItemSpacing="2" />
+        </telerikDataControls:RadListView.LayoutDefinition>
+    </telerikDataControls:RadListView>
+
+    <!--<ContentPage.Content>
+        <ListView ItemsSource="{x:Static local:interactiveListViewXaml.items}" ItemSelected="OnSelection" ItemTapped="OnTap" IsPullToRefreshEnabled="true" Refreshing="OnRefresh">
+            --><!--<ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.ContextActions>
+                            --><!-- CommandParameter is the command to pass to the clicked event handler. Because these are menu items, 
+							not cells managed by the ListView, CommandParameter is neccesary to determine which 
+							cell the context action was taken on. -->
+                            <!--<MenuItem Clicked="OnMore" Text="More" CommandParameter="{Binding .}" />
+                            <MenuItem Clicked="OnDelete" Text="Delete" IsDestructive="true" CommandParameter="{Binding .}" />--><!--
+                        </ViewCell.ContextActions>
+                        <StackLayout Padding="15,0">
+                            <Label Text="{Binding .}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>--><!--
+        </ListView>
+    </ContentPage.Content>-->
 </ContentPage>

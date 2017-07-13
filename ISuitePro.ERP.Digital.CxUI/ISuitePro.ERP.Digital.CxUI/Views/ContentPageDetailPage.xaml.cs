@@ -2,9 +2,9 @@
 
 namespace ISuitePro.ERP.Digital.CxUI.Views
 {
-    public partial class NavigationItem : ContentPage
+    public partial class ContentPageDetailPage : ContentPage
     {
-        public NavigationItem()
+        public ContentPageDetailPage()
         {
             InitializeComponent();
         }

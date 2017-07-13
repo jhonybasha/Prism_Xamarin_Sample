@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Name="page"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="ISuitePro.ERP.Digital.CxUI.Views.ContentPageDetailPage"
+             xmlns:local="clr-namespace:ISuitePro.ERP.Digital.CxUI.Views;assembly=ISuitePro.ERP.Digital.CxUI"
+             Title="Detail Page">
+    <StackLayout Margin="20">
+        <Label Text="Toolbar Items" FontAttributes="Bold" HorizontalOptions="Center" />
+        <local:AddRemoveToolbarItemsContentView BindingContext="{x:Reference page}" ParentPage="{Binding Parent}" />
+        <local:ToolbarPlacementChangerContentView BindingContext="{x:Reference page}" ParentPage="{Binding Parent}" />
+        <local:CollapseWidthAdjusterContentView BindingContext="{x:Reference page}" ParentPage="{Binding Parent}" />
+        <local:CollapseStyleChangerContentView BindingContext="{x:Reference page}" ParentPage="{Binding Parent}" />
+    </StackLayout>
+</ContentPage>

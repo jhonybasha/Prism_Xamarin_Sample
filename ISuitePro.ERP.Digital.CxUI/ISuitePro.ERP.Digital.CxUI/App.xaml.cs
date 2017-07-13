@@ -22,7 +22,9 @@ namespace ISuitePro.ERP.Digital.CxUI
             Container.RegisterTypeForNavigation<HomePage>();
             Container.RegisterTypeForNavigation<MainPage>();
             Container.RegisterTypeForNavigation<MenuPage>();
-            Container.RegisterTypeForNavigation<NavigationItem>();
+            Container.RegisterTypeForNavigation<ContentPageMasterPage>();
+            Container.RegisterTypeForNavigation<ContentPageDetailPage>();
+            Container.RegisterTypeForNavigation<ContentPageTwo>();
         }
     }
 }

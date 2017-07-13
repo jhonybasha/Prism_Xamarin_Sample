@@ -4,7 +4,23 @@
                   xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
                   prism:ViewModelLocator.AutowireViewModel="True"
                   xmlns:local="clr-namespace:ISuitePro.ERP.Digital.CxUI.Views;assembly=ISuitePro.ERP.Digital.CxUI"
-                  x:Class="ISuitePro.ERP.Digital.CxUI.Views.MainPage">
+                  xmlns:windows="clr-namespace:Xamarin.Forms.PlatformConfiguration.WindowsSpecific;assembly=Xamarin.Forms.Core"
+                  x:Class="ISuitePro.ERP.Digital.CxUI.Views.MainPage"
+                  MasterBehavior="Popover"                  
+                  windows:MasterDetailPage.CollapseStyle="Partial"
+                  windows:MasterDetailPage.CollapsedPaneWidth="48"
+                  Title="iSuitePro">    
+    <!--<MasterDetailPage.ToolbarItems>
+        <ToolbarItem.Icon>
+            <OnPlatform x:TypeArguments="FileImageSource" Android="logo.png" iOS="logo.png" WinPhone="Assets/logo.png" />
+        </ToolbarItem.Icon>
+    </MasterDetailPage.ToolbarItems>-->
+    <!--<MasterDetailPage.ToolbarItems>
+        <ToolbarItem Name="Primary1" Text="Primary 1" Icon="reminders.png" Order="Primary" />
+        <ToolbarItem Name="Primary2" Text="Primary 2" Icon="reminders.png" Order="Primary" />
+        <ToolbarItem Name="Secondary1" Text="Secondary 1" Icon="reminders.png" Order="Secondary" />
+        <ToolbarItem Name="Secondary2" Text="Secondary 2" Icon="reminders.png" Order="Secondary" />
+    </MasterDetailPage.ToolbarItems>
     <MasterDetailPage.MasterBehavior>
         <OnPlatform
             x:TypeArguments="MasterBehavior"             
@@ -19,6 +35,17 @@
                 <local:NavigationItem />
             </x:Arguments>
         </NavigationPage>
+    </MasterDetailPage.Detail>-->
+    <MasterDetailPage.ToolbarItems>
+        <ToolbarItem Name="Primary 1" Icon="reminders.png" Order="Primary" Clicked="OnToolbarItemClicked" />
+        <ToolbarItem Name="Primary 2" Icon="reminders.png" Order="Primary" Clicked="OnToolbarItemClicked" />
+        <ToolbarItem Name="Secondary 1" Icon="reminders.png" Order="Secondary" Clicked="OnToolbarItemClicked" />
+        <ToolbarItem Name="Secondary 2" Icon="reminders.png" Order="Secondary" Clicked="OnToolbarItemClicked" />
+    </MasterDetailPage.ToolbarItems>
+    <MasterDetailPage.Master>
+        <local:ContentPageMasterPage />
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <local:ContentPageDetailPage />
     </MasterDetailPage.Detail>
-  
 </MasterDetailPage>

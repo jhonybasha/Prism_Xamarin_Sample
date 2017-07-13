@@ -6,9 +6,9 @@ using System.Linq;
 
 namespace ISuitePro.ERP.Digital.CxUI.ViewModels
 {
-    public class NavigationItemViewModel : BindableBase
+    public class ContentPageTwoViewModel : BindableBase
     {
-        public NavigationItemViewModel()
+        public ContentPageTwoViewModel()
         {
 
         }
